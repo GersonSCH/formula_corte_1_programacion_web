@@ -1,0 +1,82 @@
+/* Estilos para las pestañas */
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: none; 
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #ddd;
+  }
+  
+  /* Estilos para el contenido de las pestañas */
+  .tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  .content {
+    border: 1px;
+    padding: 20px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilos para la tabla */
+  .estilo_tabla {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    padding: 4px;
+    background-color: #f9f9f9;
+  }
+
+  .alto_linea {
+    padding: 4px;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .celda_bordeada {
+    border: 1px solid #ccc;
+    padding: 1px;
+    text-align: right;
+  }
+
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /* Estilo para el boton*/
+  .estilo_boton{
+    width: 90px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .marco_etiqueta {
+    width: 300px;
+    text-align: right;
+    padding: 1px;
+    display: inline-block;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}

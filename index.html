@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    </style>
+</head>
+<body>
+    <div id="titulos" class="content">
+        <table>
+            <tr>
+                <td width="300px"><strong>Integrantes:</strong></td>
+                <td width="150px"><strong>C&oacute;digos:</strong></td>
+                <td width="400px"><strong>Presentado a:</strong></td>
+                <td rowspan="3"><img src="./img/logo_unilibre.png" width="300px"></td>
+            </tr>
+            <tr>
+                <td>Darwin Santiago Olarte Riascos</td>
+                <td>2216659</td>
+                <td>Ing. Rafael Alberto Moreno Parra</td>
+            </tr>
+            <tr>
+                <td>Gerson S&aacute;nchez Chavaco</td>
+                <td>2216607</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab" onclick="openTab('coeficientes', event)">
+        Coeficientes
+    </div>
+
+    <div class="tab" onclick="openTab('valoresXY', event)">
+        Valores XY
+    </div>
+
+    <div class="tab" onclick="openTab('grafico', event)">
+        Gr&aacute;fico
+    </div>
+
+    <div id="coeficientes" class="tab-content">
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <strong>Coeficientes</strong>
+                    </div>
+                    <table class="estilo_tabla" width="200px">
+                        <tr>
+                          <td class="alto_linea">A</td>
+                          <td class="alto_linea"><input id="varA" name="varA" placeholder="0.0" step="0.1" type="number"></td>
+                        </tr>
+                        <tr>
+                          <td class="alto_linea">B</td>
+                          <td class="alto_linea"><input id="varB" name="varB" placeholder="0.0" step="0.1" type="number"></td>
+                        </tr>
+                        <tr>
+                          <td class="alto_linea">C</td>
+                          <td class="alto_linea"><input id="varC" name="varC" placeholder="0.0" step="0.1" type="number"></td>
+                        </tr>
+                        <tr>
+                          <td class="alto_linea">D</td>
+                          <td class="alto_linea"><input id="varD" name="varD" placeholder="0.0" step="0.1" type="number"></td>
+                        </tr>
+                        <tr>
+                          <td class="alto_linea">E</td>
+                          <td class="alto_linea"><input id="varE" name="varE" placeholder="0.0" step="0.1" type="number"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2" width="700px" align="center">
+                    <img src="./img/formula.png" width="500px">
+                </td>
+            </tr>
+            <tr height="20px">
+                <td></td>
+                <td width="200px"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <strong>Valores en X</strong>
+                    </div>
+                    <table class="estilo_tabla" width="200px">
+                        <tr>
+                          <td class="alto_linea">M&iacute;nimo</td>
+                          <td class="alto_linea"><input id="xMin" type="number" name="val_min_x" value=0></td>
+                        </tr>
+                        <tr>
+                          <td class="alto_linea">M&aacute;ximo</td>
+                          <td class="alto_linea"><input id="xMax" type="number" name="val_max_x" value=0></td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="100px" align="center">
+                    <button id="procesar" class="estilo_boton" name="boton_procesar">Procesar</button>
+                </td>
+                <td>
+                    <div>
+                        <strong>Resultados</strong>
+                    </div>
+                    <table class="estilo_tabla" width="600px">
+                        <tr>
+                          <td class="alto_linea" width="150px">Valor Y M&iacute;nimo</td>
+                          <td class="celda_bordeada"><label id="yMax" class="marco_etiqueta" name="result_min_y"></td>
+                        </tr>
+                        <tr>
+                            <td class="alto_linea">Valor Y M&aacute;ximo</td>
+                            <td class="celda_bordeada"><label id="yMin" class="marco_etiqueta" name="result_max_y"></td>
+                        </tr>
+                        <tr>
+                            <td class="alto_linea">Cortes Detectados</td>
+                            <td class="celda_bordeada"><label id="Cortes" class="marco_etiqueta" name="result_cortes"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="valoresXY" class="tab-content" style="display: none;">
+        Contenido de Valores XY
+        <table>
+            <thead>
+                <tr>
+                    <th id="X">X</th>
+                    <th id="Y">Y = sin(X)</th>
+                </tr>
+            </thead>
+            <tbody id="Valores"></tbody>
+        </table>
+    </div>
+
+    <div id="grafico" class="tab-content" style="display: none;">
+        Contenido del Gr&aacute;fico
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+</html>
