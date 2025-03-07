@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         };
 
-        if (xmin >= xmax){
+        if (xmin >= xmax && xmin >= 0 && xmax >= 0){
             alert("El mínimo no puede ser igual o mayor que el máximo");
             return;
         };
