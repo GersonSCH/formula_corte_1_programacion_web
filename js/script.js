@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Agregar valores a la tabla
                 let fila = document.createElement("tr");
                 if (isNaN(y)) {
-                    fila.innerHTML = `<td>${x.toFixed(1)}</td><td>Indeterminado</td>`;
+                    fila.innerHTML = `<td class="tabla_datos">${x.toFixed(1)}</td><td class="tabla_datos">Indeterminado</td>`;
                 } else {
-                    fila.innerHTML = `<td>${x.toFixed(1)}</td><td>${y.toFixed(4)}</td>`;
+                    fila.innerHTML = `<td class="tabla_datos">${x.toFixed(1)}</td><td class="tabla_datos">${y.toFixed(4)}</td>`;
                 }
                 
                 tabla.appendChild(fila);
