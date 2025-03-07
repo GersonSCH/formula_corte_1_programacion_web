@@ -19,6 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const xmin = document.getElementById("xMin").value;
         const xmax = document.getElementById("xMax").value;
 
+        if (xmin < 0 && xmax < 0){
+            let xabsmin = Math.abs(xmin);
+            let xabsmax = Math.abs(xmax);
+            if (xabsmin <= xabsmax){
+                alert("Si ambos valores en X son negativos. El mínimo no puede ser igual o estar más cerca del 0 que el máximo");
+                return;
+            };
+        };
+
+        if (xmin >= 0 && xmax < 0){
+            alert("El mínimo no puede ser igual o mayor que el máximo");
+            return;
+        };
+
+        if (xmin >= xmax){
+            alert("El mínimo no puede ser igual o mayor que el máximo");
+            return;
+        };
+
         if (!canvas) {
             console.error("Elemento 'myChart' no encontrado.");
             return;
